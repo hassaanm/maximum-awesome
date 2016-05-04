@@ -59,13 +59,20 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <leader>l :Align
-nnoremap <leader>a :Ag<space>
+nnoremap <leader>a :Ag!<space>
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>d :NERDTreeToggle<CR>
 nnoremap <leader>f :NERDTreeFind<CR>
+nnoremap <leader>h :sp<CR>
+nnoremap <leader>n :tabe<CR>
+nnoremap <leader>q :q<CR>
 nnoremap <leader>t :CtrlP<CR>
 nnoremap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
-nnoremap <leader>] :TagbarToggle<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>v :vsp<CR>
+nnoremap <leader>[ :tabp<CR>
+nnoremap <leader>] :tabn<CR>
+nnoremap <leader>\ :TagbarToggle<CR>
 nnoremap <leader><space> :call whitespace#strip_trailing()<CR>
 nnoremap <leader>g :GitGutterToggle<CR>
 noremap <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
