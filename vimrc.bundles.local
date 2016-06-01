@@ -1,0 +1,2 @@
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'fatih/vim-go'
