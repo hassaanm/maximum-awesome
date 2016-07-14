@@ -2,6 +2,7 @@ set nocursorline " don't highlight current line
 
 " keyboard shortcuts
 inoremap jj <ESC>
+nnoremap <leader>g :YcmCompleter GoTo<CR>
 
 " highlight search
 "set hlsearch
@@ -31,3 +32,6 @@ function! s:RemoveConflictingAlignMaps()
 endfunction
 command! -nargs=0 RemoveConflictingAlignMaps call s:RemoveConflictingAlignMaps()
 silent! autocmd VimEnter * RemoveConflictingAlignMaps
+
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_goto_buffer_command = 'new-tab'
