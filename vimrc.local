@@ -1,4 +1,7 @@
-set nocursorline " don't highlight current line
+set background=dark
+
+set cursorcolumn
+set cursorline
 
 " keyboard shortcuts
 inoremap jj <ESC>
@@ -11,7 +14,8 @@ nnoremap <leader>g :YcmCompleter GoTo<CR>
 " gui settings
 if (&t_Co == 256 || has('gui_running'))
   if ($TERM_PROGRAM == 'iTerm.app')
-    colorscheme solarized
+    colorscheme base16-eighties
+    " colorscheme solarized
   else
     colorscheme desert
   endif
@@ -33,8 +37,13 @@ endfunction
 command! -nargs=0 RemoveConflictingAlignMaps call s:RemoveConflictingAlignMaps()
 silent! autocmd VimEnter * RemoveConflictingAlignMaps
 
+" YouCompleteMe
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_goto_buffer_command = 'new-tab'
+
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 " TagBar Language Support
 " Elixir
