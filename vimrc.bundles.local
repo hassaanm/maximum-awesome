@@ -1,4 +1,10 @@
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'fatih/vim-go'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe' ", { 'do': './install.py --gocode-completer --tern-completer' }
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'slashmili/alchemist.vim'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'mkitt/tabline.vim'
+Plugin 'chriskempson/base16-vim'
