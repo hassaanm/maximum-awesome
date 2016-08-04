@@ -9,3 +9,4 @@ Plugin 'edkolev/tmuxline.vim'
 Plugin 'mkitt/tabline.vim'
 Plugin 'chriskempson/base16-vim'
 Plugin 'darfink/vim-plist'
+Plugin 'ryanoasis/vim-devicons' ", use nerd-font: https://github.com/ryanoasis/nerd-fonts
