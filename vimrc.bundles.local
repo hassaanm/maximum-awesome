@@ -10,3 +10,4 @@ Plugin 'mkitt/tabline.vim'
 Plugin 'chriskempson/base16-vim'
 Plugin 'darfink/vim-plist'
 Plugin 'ryanoasis/vim-devicons' ", use nerd-font: https://github.com/ryanoasis/nerd-fonts
+Plugin 'elmcast/elm-vim' ", also install elm-format: https://github.com/avh4/elm-format
