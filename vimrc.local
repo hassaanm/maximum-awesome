@@ -6,10 +6,7 @@ set cursorline
 " keyboard shortcuts
 inoremap jj <ESC>
 nnoremap <leader>g :YcmCompleter GoTo<CR>
-
-" highlight search
-"set hlsearch
-"nmap <leader>hl :let @/ = ""<CR>
+nnoremap <leader>hh :set invhls<CR>
 
 " gui settings
 if (&t_Co == 256 || has('gui_running'))
@@ -81,3 +78,7 @@ let g:tagbar_type_elixir = {
         \ 'r:records'
     \ ]
 \ }
+
+" Alchemist
+" Want alchemist goto to have the same shortcut as ycm goto
+let g:alchemist_tag_map = '<leader>g'
