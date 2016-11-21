@@ -82,3 +82,13 @@ let g:tagbar_type_elixir = {
 " Alchemist
 " Want alchemist goto to have the same shortcut as ycm goto
 let g:alchemist_tag_map = '<leader>g'
+let g:alchemist_tag_disable = 1
+
+" Go
+let g:go_fmt_command = "goimports"
+
+" Gutentags
+let g:gutentags_cache_dir = '~/.gutentags/'
+
+" Neomake
+autocmd! BufWritePost * Neomake
