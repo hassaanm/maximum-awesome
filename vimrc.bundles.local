@@ -1,4 +1,3 @@
-Plugin 'sheerun/vim-polyglot'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'elmcast/elm-vim' ", also install elm-format: https://github.com/avh4/elm-format, elm-oracle: https://github.com/ElmCast/elm-oracle
 Plugin 'fatih/vim-go'
@@ -18,3 +17,4 @@ Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'c-brenn/phoenix.vim'
 Plugin 'tpope/vim-projectionist'
 Plugin 'neomake/neomake'
+Plugin 'sheerun/vim-polyglot' " put at the end to avoid collision with other plugins
