@@ -198,11 +198,26 @@ exec /Applications/MacVim.app/Contents/MacOS/Vim "$@"
     end
   end
 
+  desc 'Install NeoVim'
+  task :neovim do
+    step 'NeoVim'
+    brew_install 'neovim/neovim/neovim'
+    system('pip2 install --upgrade neovim')
+    system('pip3 install --upgrade neovim')
+  end
+
   desc 'Install Vundle'
   task :vundle do
     step 'vundle'
     install_github_bundle 'VundleVim','Vundle.vim'
     sh '~/bin/vim -c "PluginInstall!" -c "q" -c "q"'
+  end
+
+  desc 'Install Plug'
+  task :plug do
+    step 'Plug'
+    system('curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim')
+    sh 'nvim -c "PlugInstall!" -c "q" -c "q"'
   end
 end
 
@@ -214,16 +229,18 @@ def filemap(map)
 end
 
 COPIED_FILES = filemap(
-  'vimrc.local'         => '~/.vimrc.local',
-  'vimrc.bundles.local' => '~/.vimrc.bundles.local',
-  'tmux.conf.local'     => '~/.tmux.conf.local'
+  '' => ''
 )
 
 LINKED_FILES = filemap(
-  'vim'           => '~/.vim',
-  'tmux.conf'     => '~/.tmux.conf',
-  'vimrc'         => '~/.vimrc',
-  'vimrc.bundles' => '~/.vimrc.bundles'
+  'tmux.conf'                   => '~/.tmux.conf',
+  'tmux.conf.local'             => '~/.tmux.conf.local',
+  'vim'                         => '~/.vim',
+  'vimrc'                       => '~/.vimrc',
+  'vimrc.bundles'               => '~/.vimrc.bundles',
+  'vimrc.local'                 => '~/.vimrc.local',
+  'vimrc.bundles.local'         => '~/.vimrc.bundles.local',
+  'nvim'                        => '~/.config/nvim'
 )
 
 desc 'Install these config files.'
@@ -236,6 +253,7 @@ task :install do
   Rake::Task['install:reattach_to_user_namespace'].invoke
   Rake::Task['install:tmux'].invoke
   Rake::Task['install:macvim'].invoke
+  Rake::Task['install:neovim'].invoke
 
   # TODO install gem ctags?
   # TODO run gem ctags?
@@ -252,6 +270,9 @@ task :install do
 
   # Install Vundle and bundles
   Rake::Task['install:vundle'].invoke
+
+  # Install Plug and plugins
+  Rake::Task['install:plug'].invoke
 
   step 'iterm2 colorschemes'
   colorschemes = `defaults read com.googlecode.iterm2 'Custom Color Presets'`
