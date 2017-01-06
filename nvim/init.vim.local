@@ -53,9 +53,6 @@ let g:elm_detailed_complete = 0
 :let g:elm_format_autosave = 1
 let g:elm_setup_keybindings = 0
 let g:elm_classic_highlighting = 0
-" Temporarily necessary for some reason. Invesigate why ElmFormat isn't loading.
-command! ElmFormat call elm#Format()
-au BufWritePre *.elm call elm#Format()
 
 " TagBar Language Support
 " Elixir
