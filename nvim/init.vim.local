@@ -1,0 +1,94 @@
+" keyboard shortcuts
+inoremap jj <ESC>
+nnoremap <leader>g :YcmCompleter GoTo<CR>
+nnoremap <leader>hh :set invhls<CR>
+
+" gui settings
+if (&t_Co == 256 || has('gui_running'))
+  if ($TERM_PROGRAM == 'iTerm.app')
+    colorscheme base16-eighties
+    " colorscheme solarized
+  else
+    colorscheme desert
+  endif
+endif
+
+" Disambiguate ,a & ,t from the Align plugin, making them fast again.
+"
+" This section is here to prevent AlignMaps from adding a bunch of mappings
+" that interfere with the very-common ,a and ,t mappings. This will get run
+" at every startup to remove the AlignMaps for the *next* vim startup.
+"
+" If you do want the AlignMaps mappings, remove this section, remove
+" ~/.vim/bundle/Align, and re-run rake in maximum-awesome.
+function! s:RemoveConflictingAlignMaps()
+  if exists("g:loaded_AlignMapsPlugin")
+    AlignMapsClean
+  endif
+endfunction
+command! -nargs=0 RemoveConflictingAlignMaps call s:RemoveConflictingAlignMaps()
+silent! autocmd VimEnter * RemoveConflictingAlignMaps
+
+" YouCompleteMe
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_goto_buffer_command = 'new-tab'
+let g:ycm_semantic_triggers = {
+     \ 'elm' : ['.'],
+     \}
+
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+
+" NERDTree
+let NERDTreeShowHidden=1
+
+" Vim-Elm
+let g:elm_jump_to_error = 0
+let g:elm_make_output_file = "elm.js"
+let g:elm_make_show_warnings = 1
+let g:elm_syntastic_show_warnings = 1
+let g:elm_browser_command = ""
+let g:elm_detailed_complete = 0
+:let g:elm_format_autosave = 1
+let g:elm_setup_keybindings = 0
+let g:elm_classic_highlighting = 0
+" Temporarily necessary for some reason. Invesigate why ElmFormat isn't loading.
+command! ElmFormat call elm#Format()
+au BufWritePre *.elm call elm#Format()
+
+" TagBar Language Support
+" Elixir
+" requires ~/.ctags to contain Elixir support
+let g:tagbar_type_elixir = {
+    \ 'ctagstype' : 'elixir',
+    \ 'kinds' : [
+        \ 'f:functions',
+        \ 'functions:functions',
+        \ 'c:callbacks',
+        \ 'd:delegates',
+        \ 'e:exceptions',
+        \ 'i:implementations',
+        \ 'a:macros',
+        \ 'o:operators',
+        \ 'm:modules',
+        \ 'p:protocols',
+        \ 'r:records'
+    \ ]
+\ }
+
+" Alchemist
+" Want alchemist goto to have the same shortcut as ycm goto
+let g:alchemist_tag_disable = 1
+
+" Go
+let g:go_fmt_command = "goimports"
+
+" Gutentags
+let g:gutentags_cache_dir = '~/.gutentags/'
+
+" Neomake
+augroup localneomake
+  autocmd! BufWritePost * Neomake
+augroup END
+

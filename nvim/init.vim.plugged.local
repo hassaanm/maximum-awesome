@@ -1,0 +1,20 @@
+Plug 'sheerun/vim-polyglot'
+Plug 'elixir-lang/vim-elixir'
+Plug 'elmcast/elm-vim' ", also install elm-format: https://github.com/avh4/elm-format, elm-oracle: https://github.com/ElmCast/elm-oracle
+Plug 'fatih/vim-go'
+Plug 'Valloric/YouCompleteMe' ", { 'do': './install.py --gocode-completer --tern-completer', 'in': '~/.config/nvim/plugged/YouCompleteMe' }
+Plug 'terryma/vim-multiple-cursors'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'slashmili/alchemist.vim'
+Plug 'edkolev/tmuxline.vim'
+Plug 'mkitt/tabline.vim'
+Plug 'chriskempson/base16-vim'
+Plug 'darfink/vim-plist'
+Plug 'ryanoasis/vim-devicons' ", use nerd-font: https://github.com/ryanoasis/nerd-fonts
+Plug 'larrylv/ycm-elixir'
+Plug 'ternjs/tern_for_vim'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'c-brenn/phoenix.vim'
+Plug 'tpope/vim-projectionist'
+Plug 'neomake/neomake'
