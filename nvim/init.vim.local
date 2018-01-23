@@ -84,8 +84,15 @@ let g:go_fmt_command = "goimports"
 " Gutentags
 let g:gutentags_cache_dir = '~/.gutentags/'
 
-" Neomake
-augroup localneomake
-  autocmd! BufWritePost * Neomake
-augroup END
+" Ale
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 0
+let g:ale_fix_on_save = 1
 
+" Ale Typescript rules: linter, fixer
+let g:ale_linters = {
+\   'typescript': ['prettier', 'tslint', 'tsserver', 'typecheck'],
+\}
+let g:ale_fixers = {
+\   'typescript': ['tslint'],
+\}

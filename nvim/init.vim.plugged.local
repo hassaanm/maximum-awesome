@@ -1,7 +1,7 @@
 Plug 'elixir-lang/vim-elixir'
 Plug 'elmcast/elm-vim' ", also install elm-format: https://github.com/avh4/elm-format, elm-oracle: https://github.com/ElmCast/elm-oracle
 Plug 'fatih/vim-go'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --gocode-completer --tern-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all', 'in': 'nvim/plugged/YouCompleteMe'  }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -16,5 +16,5 @@ Plug 'ternjs/tern_for_vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'c-brenn/phoenix.vim'
 Plug 'tpope/vim-projectionist'
-Plug 'neomake/neomake'
 Plug 'sheerun/vim-polyglot' " put at the end to avoid collision with other plugins
+Plug 'w0rp/ale'
