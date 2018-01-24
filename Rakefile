@@ -201,7 +201,7 @@ exec /Applications/MacVim.app/Contents/MacOS/Vim "$@"
   desc 'Install NeoVim'
   task :neovim do
     step 'NeoVim'
-    brew_install 'neovim/neovim/neovim'
+    brew_install 'neovim'
     system('pip2 install --upgrade neovim')
     system('pip3 install --upgrade neovim')
   end
