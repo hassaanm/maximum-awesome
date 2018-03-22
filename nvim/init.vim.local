@@ -1,6 +1,7 @@
 " keyboard shortcuts
 inoremap jj <ESC>
 nnoremap <leader>g :YcmCompleter GoTo<CR>
+nnoremap <leader>gg :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>hh :set invhls<CR>
 
 " gui settings
