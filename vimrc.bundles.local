@@ -11,7 +11,6 @@ Plugin 'mkitt/tabline.vim'
 Plugin 'chriskempson/base16-vim'
 Plugin 'darfink/vim-plist'
 Plugin 'ryanoasis/vim-devicons' ", use nerd-font: https://github.com/ryanoasis/nerd-fonts
-Plugin 'larrylv/ycm-elixir'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'c-brenn/phoenix.vim'
