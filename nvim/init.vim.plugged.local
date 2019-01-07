@@ -1,7 +1,6 @@
 Plug 'elixir-lang/vim-elixir'
 Plug 'elmcast/elm-vim' ", also install elm-format: https://github.com/avh4/elm-format, elm-oracle: https://github.com/ElmCast/elm-oracle
 Plug 'fatih/vim-go'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all', 'in': 'nvim/plugged/YouCompleteMe'  }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
