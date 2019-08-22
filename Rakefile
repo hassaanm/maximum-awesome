@@ -17,6 +17,15 @@ def brew_install(package, *args)
   end
 end
 
+def gem_install(dependency)
+  sh "gem install #{dependency}"
+end
+
+# Unfortunately, it does not auto close the file.
+def neovim_command(command)
+  sh "nvim -c '#{command}'"
+end
+
 def version_match?(requirement, version)
   # This is a hack, but it lets us avoid a gem dep for version checking.
   # Gem dependencies must be numeric, so we remove non-numeric characters here.
@@ -219,6 +228,13 @@ exec /Applications/MacVim.app/Contents/MacOS/Vim "$@"
     system('curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim')
     sh 'nvim -c "PlugInstall!" -c "q" -c "q"'
   end
+
+  desc 'Install solargraph'
+  task :solargraph do
+    step 'Solargraph'
+    gem_install 'solargraph'
+    neovim_command(':CocInstall coc-solargraph')
+  end
 end
 
 def filemap(map)
@@ -254,6 +270,7 @@ task :install do
   Rake::Task['install:tmux'].invoke
   Rake::Task['install:macvim'].invoke
   Rake::Task['install:neovim'].invoke
+  Rake::Task['install:solargraph'].invoke
 
   # TODO install gem ctags?
   # TODO run gem ctags?
