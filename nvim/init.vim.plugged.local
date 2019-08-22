@@ -16,3 +16,6 @@ Plug 'c-brenn/phoenix.vim'
 Plug 'tpope/vim-projectionist'
 Plug 'sheerun/vim-polyglot' " put at the end to avoid collision with other plugins
 Plug 'w0rp/ale'
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " also run the following commands:
+                                                " sudo gem install solargraph
+                                                " :CocInstall coc-solargraph (inside neovim)
