@@ -23,6 +23,9 @@ if (&t_Co == 256 || has('gui_running'))
   endif
 endif
 
+" use italics for comments
+highlight Comment cterm=italic gui=italic
+
 " Disambiguate ,a & ,t from the Align plugin, making them fast again.
 "
 " This section is here to prevent AlignMaps from adding a bunch of mappings
