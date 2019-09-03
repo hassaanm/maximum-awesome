@@ -11,6 +11,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'darfink/vim-plist'
 Plug 'ryanoasis/vim-devicons' " use nerd-font: https://github.com/ryanoasis/nerd-fonts
 Plug 'ternjs/tern_for_vim'
+Plug 'ternjs/tern_for_vim' ", run 'npm install' in the nvim/plugged/tern_for_vim
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'c-brenn/phoenix.vim'
 Plug 'tpope/vim-projectionist'

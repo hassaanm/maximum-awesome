@@ -10,7 +10,7 @@ Plugin 'mkitt/tabline.vim'
 Plugin 'chriskempson/base16-vim'
 Plugin 'darfink/vim-plist'
 Plugin 'ryanoasis/vim-devicons' ", use nerd-font: https://github.com/ryanoasis/nerd-fonts
-Plugin 'ternjs/tern_for_vim'
+Plugin 'ternjs/tern_for_vim' ", run 'npm install' in the vim/bundle/tern_for_vim
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'c-brenn/phoenix.vim'
 Plugin 'tpope/vim-projectionist'
