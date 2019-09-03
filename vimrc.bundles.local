@@ -15,4 +15,4 @@ Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'c-brenn/phoenix.vim'
 Plugin 'tpope/vim-projectionist'
 Plugin 'sheerun/vim-polyglot' " put at the end to avoid collision with other plugins
-Plugin 'w0rp/ale'
+Plugin 'dense-analysis/ale'
