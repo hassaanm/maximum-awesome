@@ -60,7 +60,7 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <leader>l :Align
-nnoremap <leader>a :Ag!<space>
+nnoremap <leader>a :Ack<space>
 nnoremap <leader>b :Gblame<CR>
 nnoremap <leader>d :NERDTreeToggle<CR>
 nnoremap <leader>f :NERDTreeFind<CR>
@@ -94,6 +94,9 @@ if executable('ag')
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " Use ag for ack.vim
+  let g:ackprg = 'ag --vimgrep'
 endif
 
 " fdoc is yaml
