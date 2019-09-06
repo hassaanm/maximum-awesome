@@ -63,6 +63,7 @@ nnoremap <leader>f :NERDTreeFind<CR>
 nnoremap <leader>h :sp<CR>
 nnoremap <leader>n :tabe<CR>
 nnoremap <leader>q :q<CR>
+nnoremap <leader>r :edit<CR>
 nnoremap <leader>t :CtrlP<CR>
 nnoremap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
 nnoremap <leader>w :w<CR>
