@@ -58,6 +58,7 @@ noremap <C-l> <C-w>l
 noremap <leader>l :Align
 nnoremap <leader>a :Ack<space>
 nnoremap <leader>b :Gblame<CR>
+nnoremap <leader>c :enew<CR>
 nnoremap <leader>d :NERDTreeToggle<CR>
 nnoremap <leader>f :NERDTreeFind<CR>
 nnoremap <leader>h :sp<CR>
