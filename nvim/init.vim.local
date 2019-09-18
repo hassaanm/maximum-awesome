@@ -1,6 +1,8 @@
 " keyboard shortcuts
 inoremap jj <ESC>
 nnoremap <leader>hh :noh<CR>
+nnoremap <C-]> <C-i>
+nnoremap <C-[> <C-o>
 
 " gui settings
 if filereadable(expand("~/.vimrc_background"))
