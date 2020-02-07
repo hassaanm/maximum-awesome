@@ -1,1 +1,29 @@
 # Add your local tmux config here
+
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+
+# Terminal type configuration
+set -ga terminal-overrides ",xterm-256color:Tc"
+
+# Enable copy
+set -g default-command "reattach-to-user-namespace -l zsh"
+
+# Increase default tmux history
+set-option -g history-limit 10000
+
+# Window bindings in current directory
+bind '"' split-window -c "{#pane_current_path}"
+bind % split-window -h -c "{#pane_current_path}"
+bind c new -c "{#pane_current_path}"
+
+# Vim window navigation
+bind-key -r C-h select-window -t :-
+bind-key -r C-l select-window -t :+
+
+# Clear pane
+bind -n C-k send-keys -R \; clear-history
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '/.tmux/plugins/tpm/tpm'
